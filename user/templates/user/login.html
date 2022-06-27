@@ -1,6 +1,6 @@
 {% extends "home/index.html" %}
 {% load static %}
-{% block seci-project_content %}
+{% block facus-blog_content %}
 
 <h2>Login</h2>
 <hr></hr>
@@ -12,7 +12,7 @@
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <a class="btn2 btn-dark" href="{% url 'user:user-register' %}" >Registo</a>
+    <a class="btn2 btn-dark" href="{% url 'user:user-register' %}" >Registro</a>
     <button type="submit">Iniciar Sesión</button>
 </form>
 
