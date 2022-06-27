@@ -1,6 +1,7 @@
+from email.policy import default
 from django.db import models
 import datetime
-from user.models import User
+from django.conf import settings
 from ckeditor.fields import RichTextField
 
 # Create your models here.
@@ -15,7 +16,7 @@ class Game(models.Model):
     year = models.IntegerField(('Año'), choices=YEAR_CHOICES, default=datetime.datetime.now().year)
     plot = RichTextField(blank = True, null=True, verbose_name="Trama")
     post_date = models.DateTimeField(auto_now=True)
-    author = models.ForeignKey(User,null=True,blank=True,on_delete=models.DO_NOTHING,default="", verbose_name="Autor")
+    author = models.ForeignKey(settings.AUTH_USER_MODEL,default=1,null=True,blank=True,on_delete=models.DO_NOTHING, verbose_name="Autor")
 
 
     def __str__(self):
