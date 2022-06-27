@@ -26,6 +26,8 @@
             <div class="container">
                 <a class="navbar-brand" href="{% url 'home:main' %}">Home</a>
                 <a class="navbar-brand" href="{% url 'movie:movie-list' %}">Películas</a>
+                <a class="navbar-brand" href="{% url 'music:music-list' %}">Música</a>
+                <a class="navbar-brand" href="{% url 'game:game-list' %}">Juegos</a>
                 {% if user.is_authenticated %}
                 <a class="btn btn-secondary" href="{% url 'user:user-update' %}">Editar usuario</a>
                 <a class="btn btn-primary" href="{% url 'user:user-logout' %}">Cerrar Sesión</a>
@@ -70,6 +72,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                        <ul class="list-inline mb-2">
+                            <li class="list-inline-item"><a href="#!">About</a></li>
+                            <li class="list-inline-item">⋅</li>
+                        </ul>
                         <p class="text-muted small mb-4 mb-lg-0">&copy; FACUS </p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">

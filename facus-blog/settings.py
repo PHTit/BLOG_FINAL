@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'home',
     'user',
     'movie',
+    'game',
+    'music',
 ]
 
 MIDDLEWARE = [

@@ -34,3 +34,11 @@ def search(request):
         context=context_dict,
         template_name="home/main.html",
     )
+
+def about(request):
+    context_dict = {}
+    return render(
+        request=request,
+        context=context_dict,
+        template_name="home/about.html",
+    )
