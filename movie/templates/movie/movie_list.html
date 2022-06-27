@@ -11,30 +11,31 @@
 <br>
 <ul>
     {% for movie in movie_list %}
-    <h5>
+    <h4>
     <li>
+ 
+
+        {{movie.name }} - {{ movie.year}}
         
-        {{movie}}
-        (
         
-            <a href="{% url 'movie:movie-detail' movie.id %}">
+            <a class="btn2 btn-primary" href="{% url 'movie:movie-detail' movie.id %}">
                 <i class="fa fa-eye" style="color: rgb(255, 255, 255);"> </i>
             </a>
-        )
+        
         {%  if user.is_authenticated %}
-        |
-        <a href="{% url 'movie:movie-update' movie.id %}">
+        
+        <a class="btn2 btn-primary" href="{% url 'movie:movie-update' movie.id %}">
             <i class="fa fa-pencil" style="color: rgb(255, 255, 255);"> </i>
         </a>
-        |
-        <a href="{% url 'movie:movie-delete' movie.id %}">
+        
+        <a class="btn2 btn-primary" href="{% url 'movie:movie-delete' movie.id %}">
             <i class="fa fa-trash" style="color: rgb(255, 255, 255);"> </i>
         </a>
         
         {% endif %}
         
     </li>
-    </h5>
+    </h4>
     <p></p>
     {% endfor %}
 </ul>
