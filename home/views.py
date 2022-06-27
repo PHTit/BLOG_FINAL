@@ -42,3 +42,9 @@ def about(request):
         context=context_dict,
         template_name="home/about.html",
     )
+
+
+def handler404(request, exception, template_name="home/not-found.html"):
+    response = render('/not-found')
+    response.status_code = 404
+    return render(request, response)

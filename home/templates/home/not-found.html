@@ -1,0 +1,10 @@
+{% extends "home/index.html" %}
+{% load static %}
+{% block facus-blog_content %}
+
+<hr></hr>
+<h2>Usted ha salido del sitio</h2>
+<br>
+<a class="btn btn-primary" href="{% url 'home:main' %}">Volver</a>
+
+{% endblock %}
